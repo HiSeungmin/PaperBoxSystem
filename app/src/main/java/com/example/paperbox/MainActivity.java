@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.paperbox.ui.main.SectionsPagerAdapter;
 import com.example.paperbox.databinding.ActivityMainBinding;
@@ -28,14 +30,22 @@ public class MainActivity extends AppCompatActivity {
 
         Button login_Button = findViewById(R.id.button_login);
         Button register_Button = findViewById(R.id.button_register);
+        EditText edit_id = findViewById(R.id.editText_id);
+        EditText edit_pw = findViewById(R.id.editText_pw);
 
+//        String id = edit_id.getText().toString();
+//        String pw = edit_pw.getText().toString();
 
         login_Button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SubMain.class);
-                startActivity(intent);
+                if (edit_id.getText().toString().equals("") || edit_pw.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(),"아이디 혹은 비밀번호를 입력하세요.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), SubMain.class);
+                    startActivity(intent);
+                }
             }
         });
 

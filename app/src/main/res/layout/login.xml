@@ -32,7 +32,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/editText_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -57,7 +57,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/editText_pw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
