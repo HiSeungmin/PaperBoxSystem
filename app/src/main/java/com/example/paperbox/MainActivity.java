@@ -33,9 +33,6 @@ public class MainActivity extends AppCompatActivity {
         EditText edit_id = findViewById(R.id.editText_id);
         EditText edit_pw = findViewById(R.id.editText_pw);
 
-//        String id = edit_id.getText().toString();
-//        String pw = edit_pw.getText().toString();
-
         login_Button.setOnClickListener(new View.OnClickListener() {
 
             @Override
