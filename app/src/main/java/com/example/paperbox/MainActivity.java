@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        //oseungmin babo
+        //oseungmin babo 멍청이
         register_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
