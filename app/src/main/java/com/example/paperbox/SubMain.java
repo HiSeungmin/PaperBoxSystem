@@ -5,10 +5,14 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.paperbox.databinding.ActivityMainBinding;
 import com.example.paperbox.ui.main.SectionsPagerAdapter;
+import com.example.paperbox.ui.main.my_info;
+import com.example.paperbox.ui.main.refund;
+import com.example.paperbox.ui.main.weighing;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
@@ -16,6 +20,7 @@ import com.google.android.material.tabs.TabLayout;
 public class SubMain extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,7 @@ public class SubMain extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
 
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +45,7 @@ public class SubMain extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
 
 
     }
