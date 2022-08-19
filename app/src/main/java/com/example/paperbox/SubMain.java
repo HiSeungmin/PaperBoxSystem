@@ -1,5 +1,6 @@
 package com.example.paperbox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +17,11 @@ import com.example.paperbox.ui.main.weighing;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SubMain extends AppCompatActivity {
+
+    // 메인화면
 
     private ActivityMainBinding binding;
 
@@ -36,13 +40,21 @@ public class SubMain extends AppCompatActivity {
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
+        Intent intent = new Intent(this, MainActivity.class);
 
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "어떤 버튼으로 만들까 고민중...", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "로그아웃", Snackbar.LENGTH_LONG)
+                        .setAction("확인", new View.OnClickListener(){
+                            @Override
+                            public void onClick(View view){
+                                FirebaseAuth.getInstance().signOut();
+                                startActivity(intent);
+                                finish();
+                            }
+                        }).show();
             }
         });
 

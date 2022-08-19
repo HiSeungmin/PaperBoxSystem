@@ -33,7 +33,7 @@
             android:text="이름" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/NameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -57,7 +57,7 @@
             android:text="아이디" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/AddressText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
