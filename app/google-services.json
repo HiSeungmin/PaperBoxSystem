@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "971509316266",
+    "project_id": "paperbox-aa877",
+    "storage_bucket": "paperbox-aa877.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971509316266:android:fe3edb866e8c23c420eed3",
+        "android_client_info": {
+          "package_name": "com.example.paperbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971509316266-7vs6qhjbj1o6d2iksdg39fphsf28hrqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcySTiRgSP0yNrH09CPAGkO1bfN3Grnz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971509316266-7vs6qhjbj1o6d2iksdg39fphsf28hrqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
