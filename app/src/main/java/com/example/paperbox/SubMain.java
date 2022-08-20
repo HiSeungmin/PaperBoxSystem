@@ -3,17 +3,12 @@ package com.example.paperbox;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.paperbox.databinding.ActivityMainBinding;
 import com.example.paperbox.ui.main.SectionsPagerAdapter;
-import com.example.paperbox.ui.main.my_info;
-import com.example.paperbox.ui.main.refund;
-import com.example.paperbox.ui.main.weighing;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
