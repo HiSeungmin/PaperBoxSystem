@@ -2,6 +2,7 @@ package com.example.paperbox;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,8 @@ public class SubMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Intent getintent = getIntent();
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -45,6 +48,9 @@ public class SubMain extends AppCompatActivity {
                         .setAction("확인", new View.OnClickListener(){
                             @Override
                             public void onClick(View view){
+//                                if(getintent.getExtras().getString("login_mode").equals("google")){
+//                                    FirebaseAuth.getInstance().signOut();
+//                                }
                                 FirebaseAuth.getInstance().signOut();
                                 startActivity(intent);
                                 finish();

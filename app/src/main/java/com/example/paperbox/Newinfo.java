@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -72,13 +71,18 @@ public class Newinfo extends AppCompatActivity {
 
     private void WriteDB(Map data){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Intent login = new Intent(this, MainActivity.class);
+        Intent login = new Intent(getApplicationContext(), MainActivity.class);
         db.collection("Users")
                 .document(mAuth.getCurrentUser().getUid())
                 .set(data)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
+                        login.putExtra("login_mode","google");
+                        login.putExtra("name",data.get("name").toString());
+                        login.putExtra("phone",data.get("phone").toString());
+                        login.putExtra("address",data.get("address").toString());
+                        login.putExtra("point",data.get("name").toString());
                         startActivity(login);
                         finish();
                     }
