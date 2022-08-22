@@ -33,7 +33,7 @@
             android:text="이름" />
 
         <EditText
-            android:id="@+id/NameText"
+            android:id="@+id/RegisterNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -57,7 +57,7 @@
             android:text="아이디" />
 
         <EditText
-            android:id="@+id/AddressText"
+            android:id="@+id/IdText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -81,7 +81,7 @@
             android:text="비밀번호" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/PasswordText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -105,7 +105,7 @@
             android:text="비밀번호 확인" />
 
         <EditText
-            android:id="@+id/editTextTextPassword3"
+            android:id="@+id/PassConfirmText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"

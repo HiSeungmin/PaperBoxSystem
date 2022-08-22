@@ -37,6 +37,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,14 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-//                if (edit_id.getText().toString().equals("") || edit_pw.getText().toString().equals("")){
-//                    Toast.makeText(getApplicationContext(),"아이디 혹은 비밀번호를 입력하세요.",Toast.LENGTH_SHORT).show();
-//                } else {
-//                    Intent intent = new Intent(getApplicationContext(), SubMain.class);
-//                    startActivity(intent);
-//                }
-                Intent intent = new Intent(getApplicationContext(), SubMain.class);
-                startActivity(intent);
+                if (edit_id.getText().toString().equals("") || edit_pw.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(),"아이디 혹은 비밀번호를 입력하세요.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Login(edit_id.getText().toString(),edit_pw.getText().toString());
+                }
+//                Intent intent = new Intent(getApplicationContext(), SubMain.class);
+//                startActivity(intent);
             }
         });
 
@@ -105,6 +106,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void Login(String ID, String Pass){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Intent intent = new Intent(getApplicationContext(), SubMain.class);
+        db.collection("RegisterUsers")
+                .whereEqualTo("ID",ID)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                if(document.getData().get("password").toString().equals(Pass)){
+                                    intent.putExtra("login_mode", "register");
+                                    intent.putExtra("name",document.getData().get("name").toString());
+                                    intent.putExtra("point",document.getData().get("point").toString());
+                                    startActivity(intent);
+                                }
+                                else{
+                                    Toast.makeText(getApplicationContext(),"비밀번호가 틀렸습니다",Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(),"로그인에 문제가 발생했습니다.",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     @Override
@@ -159,8 +188,8 @@ public class MainActivity extends AppCompatActivity {
     private void readData(FirebaseUser user){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference DocRef = db.collection("Users").document(user.getUid());
-        Intent intent_return = new Intent(this, SubMain.class);
-        Intent intent_new = new Intent(this, Newinfo.class);
+        Intent intent_main = new Intent(getApplicationContext(), SubMain.class);
+        Intent intent_new = new Intent(getApplicationContext(), Newinfo.class);
         DocRef.get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
@@ -168,7 +197,12 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             DocumentSnapshot doc = task.getResult();
                             if(doc.exists()){
-                                startActivity(intent_return);
+                                intent_main.putExtra("login_mode", "google");
+                                intent_main.putExtra("name",doc.getString("name"));
+                                intent_main.putExtra("phone",doc.getString("phone"));
+                                intent_main.putExtra("address",doc.getString("address"));
+                                intent_main.putExtra("point",doc.get("point").toString());
+                                startActivity(intent_main);
                                 finish();
                             }
                             else{
