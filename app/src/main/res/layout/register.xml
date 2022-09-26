@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="#F3DDD6"
     android:padding="20dp">
 
     <TextView
@@ -127,6 +128,13 @@
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:text="거주지" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
 
     <Button
