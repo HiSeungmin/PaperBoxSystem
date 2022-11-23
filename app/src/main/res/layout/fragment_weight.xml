@@ -50,7 +50,7 @@
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_progress_bar_background"
-                android:max="120"
+                android:max="100"
                 android:progressDrawable="@drawable/circular_progress_bar" />
 
 
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="2022-09-26 14:25"
+                android:hint="2022-09-26 13:46"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:padding="5dp"/>
