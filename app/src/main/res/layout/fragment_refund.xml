@@ -155,7 +155,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#B87F7F"
-            android:text="기프티콘 바코드 받기" />
+            android:text="기프티콘 사용 방법 보기" />
 
 
     </LinearLayout>

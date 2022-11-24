@@ -25,6 +25,7 @@ import java.util.Locale;
 public class weight extends Fragment { //implements CircleProgressBar.ProgressFormatter
 
     TextView date;
+    TextView kg;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -76,14 +77,18 @@ public class weight extends Fragment { //implements CircleProgressBar.ProgressFo
         View v = inflater.inflate(R.layout.fragment_weight, container, false);
 
         date = v.findViewById(R.id.Date_textView);
+        kg = v.findViewById(R.id.textView_kg);
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.KOREAN);
         String time = sdf.format (System.currentTimeMillis());
 
         date.setText(time);
 
+
         CheckTypesTask task = new CheckTypesTask();
         task.execute();
+
+        //kg.setText("12.8kg");
 
         return v;
     }

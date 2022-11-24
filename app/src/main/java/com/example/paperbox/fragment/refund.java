@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public class refund extends Fragment {
     ImageButton imageButton8;
     ImageButton imageButton9;
 
-
+    Button solution;
 
 
     @Override
@@ -52,7 +53,7 @@ public class refund extends Fragment {
         imageButton7 = v.findViewById(R.id.imageButton7);
         imageButton8 = v.findViewById(R.id.imageButton8);
         imageButton9 = v.findViewById(R.id.imageButton9);
-
+        solution = v.findViewById(R.id.button2);
 
         imageButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +110,13 @@ public class refund extends Fragment {
             }
         });
 
+        solution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showdialog();
+            }
+        });
+
 
         return v;
     }
@@ -135,5 +143,21 @@ public class refund extends Fragment {
             }
         });//no버튼 누르면 뭐할지 _토스트를 하게 했다.//두가지 버전으로 가능.~.~; .~;
         dig.show();
+    }
+
+    public void showdialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+        dialog.setIcon(R.mipmap.ic_launcher);//알림창 아이콘 설정
+        dialog.setTitle("기프티콘 사용 방법");
+        dialog.setMessage("화면에 사용자의 포인터에 맞는 기프티콘이 보여집니다. 원하는 기프티콘을 클릭하면 구매하실 수 있습니다. 한 번 구매한 기프티콘은 다시 포인터로 변환할 수 없습니다."); //알림창 메세지 설정
+
+        //알림창의 닫기를 눌렀을때 발생 이벤트 설정
+        dialog.setNeutralButton("닫기", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Toast.makeText(getContext(),"창을 닫습니다",Toast.LENGTH_SHORT).show();
+            } //닫기를 눌렀을때, 토스트 알림메세지 뜸.
+        });
+        dialog.show();
     }
 }
