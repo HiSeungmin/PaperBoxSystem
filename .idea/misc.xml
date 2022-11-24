@@ -23,10 +23,11 @@
         <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/fragment_main.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/fragment_my_info.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/fragment_refund.xml" value="0.24334600760456274" />
-        <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/fragment_weight.xml" value="0.264" />
+        <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/fragment_weight.xml" value="0.2" />
         <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/login.xml" value="0.264" />
         <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/register.xml" value="0.21467391304347827" />
         <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/test.xml" value="0.203125" />
+        <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/layout/weight_history_item.xml" value="0.264" />
         <entry key="..\:/Users/osmin/workspace/han/PaperBoxSystem/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5101837158203125" />
         <entry key="app/src/main/res/layout/activity_newinfo.xml" value="0.19610507246376813" />
