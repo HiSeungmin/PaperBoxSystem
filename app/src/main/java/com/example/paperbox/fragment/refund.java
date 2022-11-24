@@ -28,6 +28,8 @@ public class refund extends Fragment {
     ImageButton imageButton9;
 
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,71 @@ public class refund extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_refund, container, false);
 
+        imageButton1 = v.findViewById(R.id.imageButton1);
+        imageButton2 = v.findViewById(R.id.imageButton2);
+        imageButton3 = v.findViewById(R.id.imageButton3);
+        imageButton4 = v.findViewById(R.id.imageButton4);
+        imageButton5 = v.findViewById(R.id.imageButton5);
+        imageButton6 = v.findViewById(R.id.imageButton6);
+        imageButton7 = v.findViewById(R.id.imageButton7);
+        imageButton8 = v.findViewById(R.id.imageButton8);
+        imageButton9 = v.findViewById(R.id.imageButton9);
+
+
+        imageButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+        imageButton9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
 
 
         return v;
@@ -49,12 +116,12 @@ public class refund extends Fragment {
     public void show() {
         AlertDialog.Builder dig = new AlertDialog.Builder(getContext());
 
-        dig.setTitle("2300₩ 구매하기");
-        dig.setMessage("해당 강아지로 체험하시겠습니까?\n한 번 구매한 후에는 자동 소장됩니다.");
+        dig.setTitle("2300P 구매하기");
+        dig.setMessage("해당 기프티콘로 교환하시겠습니까?\n 교환 후 다시 포인트로 되돌릴 수 없습니다.");
         dig.setIcon(R.drawable.ic_launcher_foreground).setPositiveButton("ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getContext(),"현재는 구매하실 수 없습니다.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"교환되었습니다.",Toast.LENGTH_SHORT).show();
 
                 //displayToast("ok");
             }

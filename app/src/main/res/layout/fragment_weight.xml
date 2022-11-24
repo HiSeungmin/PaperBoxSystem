@@ -44,15 +44,24 @@
                 android:textColor="@color/black"
                 android:textSize="25sp" />
 
-            <ProgressBar
+            <!--ProgressBar
                 android:id="@+id/record_progress_bar"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_progress_bar_background"
                 android:max="100"
-                android:progressDrawable="@drawable/circular_progress_bar" />
+                android:progressDrawable="@drawable/circular_progress_bar" /-->
 
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="100dp"
+                android:textSize="30sp"
+                android:text="0kg" />
 
             <TextView
                 android:id="@+id/Date_textView"

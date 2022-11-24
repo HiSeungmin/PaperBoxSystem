@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         EditText edit_pw = findViewById(R.id.editText_pw);
 
         login_Button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
 //                if (edit_id.getText().toString().equals("") || edit_pw.getText().toString().equals("")){
