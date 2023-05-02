@@ -11,3 +11,5 @@
 
 · 편리한 환급 서비스로 종이 박스 수거를 도모
 
+### 결과 
+<https://github.com/HiSeungmin/PaperBoxSystem/blob/master/img/image01.png?raw=true>
