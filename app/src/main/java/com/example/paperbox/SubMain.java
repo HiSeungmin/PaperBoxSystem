@@ -1,11 +1,13 @@
 package com.example.paperbox;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.paperbox.databinding.ActivityMainBinding;
@@ -38,7 +40,7 @@ public class SubMain extends AppCompatActivity {
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, SubMain.class);
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -62,4 +64,5 @@ public class SubMain extends AppCompatActivity {
 
 
     }
+
 }

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    android:background="#F3DDD6"
     tools:context=".fragment.weight">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,39 +18,109 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="12dp"
+            android:background="@drawable/shadow"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+
+            <!-- 프로그레스바 오류
+        <com.dinuscxj.progressbar.CircleProgressBar
+            android:id="@+id/line_progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="MissingClass" />-->
+
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="현재 무게"
-                android:textSize="18sp" />
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="종이박스 무게 측정중"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <!--ProgressBar
+                android:id="@+id/record_progress_bar"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circular_progress_bar_background"
+                android:max="100"
+                android:progressDrawable="@drawable/circular_progress_bar" /-->
+
 
             <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
+                android:id="@+id/textView_kg"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kg" />
+                android:layout_gravity="center"
+                android:padding="100dp"
+                android:textSize="40sp"
+                android:text="0kg" />
+
+            <TextView
+                android:id="@+id/Date_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="2022-09-26 13:46"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:padding="5dp"/>
+
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="7dp"
+            android:background="@drawable/shadow"
+            android:elevation="5dp"
+            android:padding="5dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="누적 무게"
-                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView12"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kg" />
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="기록"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#888686"
+                android:padding="5dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/weight_history_item" /-->
+                </LinearLayout>
+            </ScrollView>
+
         </LinearLayout>
 
     </LinearLayout>

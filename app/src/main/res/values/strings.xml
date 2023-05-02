@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PaperBox</string>
+    <string name="app_name">Paper box colletion system</string>
     <string name="tab_text_1">무게 측정</string>
     <string name="tab_text_2">환급</string>
     <string name="tab_text_3">내 정보</string>

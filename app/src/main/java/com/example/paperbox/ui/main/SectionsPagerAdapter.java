@@ -5,15 +5,18 @@ import android.content.Context;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
+
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.paperbox.R;
+import com.example.paperbox.fragment.my_info;
+import com.example.paperbox.fragment.refund;
+import com.example.paperbox.fragment.my_info;
+import com.example.paperbox.fragment.refund;
+import com.example.paperbox.fragment.weight;
 
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
+
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
@@ -29,7 +32,21 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        switch (position) {
+            case 0:
+                weight weight = new weight();
+                return weight;
+            case 1:
+                refund refund = new refund();
+                return refund;
+            case 2:
+                my_info my_info = new my_info();
+                return my_info;
+            default:
+                return null;
+        }
+
+        //return PlaceholderFragment.newInstance(position + 1);
     }
 
     @Nullable
