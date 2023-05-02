@@ -64,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                if (edit_id.getText().toString().equals("") || edit_pw.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(),"아이디 혹은 비밀번호를 입력하세요.",Toast.LENGTH_SHORT).show();
-                } else {
-                    Login(edit_id.getText().toString(),edit_pw.getText().toString());
-                }
-//                Intent intent = new Intent(getApplicationContext(), SubMain.class);
-//                startActivity(intent);
+//                if (edit_id.getText().toString().equals("") || edit_pw.getText().toString().equals("")){
+//                    Toast.makeText(getApplicationContext(),"아이디 혹은 비밀번호를 입력하세요.",Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Login(edit_id.getText().toString(),edit_pw.getText().toString());
+//                }
+                Intent intent = new Intent(getApplicationContext(), SubMain.class);
+                startActivity(intent);
             }
         });
 
