@@ -14,6 +14,6 @@
 ### 결과 
 
 
-<img src="https://github.com/HiSeungmin/PaperBoxSystem/blob/master/img/image01.png?raw=true" width="300" alt="Tetris game"> <img src="https://github.com/HiSeungmin/PaperBoxSystem/blob/master/img/image02.png?raw=true" width="300" alt="Tetris game"> <img src="https://github.com/HiSeungmin/PaperBoxSystem/blob/master/img/image03.png?raw=true" width="300" alt="Tetris game">
+<img src="https://github.com/HiSeungmin/PaperBoxSystem/blob/master/img/image01.png?raw=true" width="250" alt="Tetris game"> <img src="https://github.com/HiSeungmin/PaperBoxSystem/blob/master/img/image02.png?raw=true" width="250" alt="Tetris game"> <img src="https://github.com/HiSeungmin/PaperBoxSystem/blob/master/img/image03.png?raw=true" width="250" alt="Tetris game">
 
 
